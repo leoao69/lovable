@@ -1,0 +1,246 @@
+{
+  "2023": {
+    "standardized_metadata": {
+      "company_name": "Summit Ridge Manufacturing",
+      "currency": "USD",
+      "date": "Dec 31, 2023"
+    },
+    "financials": {
+      "assets": {
+        "total_assets": {
+          "amount": 1500000,
+          "source_text": "Total assets",
+          "source_value": "$1,500,000"
+        },
+        "current": {
+          "cash_and_equivalents": {
+            "amount": 250000,
+            "source_text": "Cash and cash equivalents",
+            "source_value": "$250,000"
+          },
+          "accounts_receivable": {
+            "amount": 150000,
+            "source_text": "Accounts receivable",
+            "source_value": "$150,000"
+          },
+          "inventory": {
+            "amount": 100000,
+            "source_text": "Inventory",
+            "source_value": "$100,000"
+          },
+          "other_current_assets": {
+            "amount": 50000,
+            "source_text": "Other current assets",
+            "source_value": "$50,000"
+          },
+          "total_current_assets": {
+            "amount": 550000,
+            "source_text": "Total current assets",
+            "source_value": "$550,000"
+          }
+        },
+        "non_current": {
+          "pp_and_e": {
+            "amount": 900000,
+            "source_text": "Property, plant, and equipment",
+            "source_value": "$900,000"
+          },
+          "intangible_assets": {
+            "amount": 50000,
+            "source_text": "Intangible assets",
+            "source_value": "$50,000"
+          },
+          "total_non_current_assets": {
+            "amount": 950000,
+            "source_text": "Total non-current assets",
+            "source_value": "$950,000"
+          }
+        }
+      },
+      "liabilities": {
+        "total_liabilities": {
+          "amount": 600000,
+          "source_text": "Total liabilities",
+          "source_value": "$600,000"
+        },
+        "current": {
+          "accounts_payable": {
+            "amount": 120000,
+            "source_text": "Accounts payable",
+            "source_value": "$120,000"
+          },
+          "short_term_debt": {
+            "amount": 80000,
+            "source_text": "Short-term debt",
+            "source_value": "$80,000"
+          },
+          "total_current_liabilities": {
+            "amount": 200000,
+            "source_text": "Total current liabilities",
+            "source_value": "$200,000"
+          }
+        },
+        "non_current": {
+          "long_term_debt": {
+            "amount": 400000,
+            "source_text": "Long-term debt",
+            "source_value": "$400,000"
+          },
+          "total_non_current_liabilities": {
+            "amount": 400000,
+            "source_text": "Total non-current liabilities",
+            "source_value": "$400,000"
+          }
+        }
+      },
+      "equity": {
+        "total_equity": {
+          "amount": 900000,
+          "source_text": "Total equity",
+          "source_value": "$900,000"
+        },
+        "common_stock": {
+          "amount": 400000,
+          "source_text": "Common stock",
+          "source_value": "$400,000"
+        },
+        "retained_earnings": {
+          "amount": 500000,
+          "source_text": "Retained earnings",
+          "source_value": "$500,000"
+        }
+      }
+    },
+    "validation_report": {
+      "is_balanced": true,
+      "accounting_equation": {
+        "assets": 1500000,
+        "L+E": 1500000,
+        "difference": 0
+      },
+      "status": "PASS"
+    }
+  },
+  "2022": {
+    "standardized_metadata": {
+      "company_name": "Summit Ridge Manufacturing",
+      "currency": "USD",
+      "date": "Dec 31, 2022"
+    },
+    "financials": {
+      "assets": {
+        "total_assets": {
+          "amount": 1300000,
+          "source_text": "Total assets",
+          "source_value": "$1,300,000"
+        },
+        "current": {
+          "cash_and_equivalents": {
+            "amount": 200000,
+            "source_text": "Cash and cash equivalents",
+            "source_value": "$200,000"
+          },
+          "accounts_receivable": {
+            "amount": 120000,
+            "source_text": "Accounts receivable",
+            "source_value": "$120,000"
+          },
+          "inventory": {
+            "amount": 90000,
+            "source_text": "Inventory",
+            "source_value": "$90,000"
+          },
+          "other_current_assets": {
+            "amount": 40000,
+            "source_text": "Other current assets",
+            "source_value": "$40,000"
+          },
+          "total_current_assets": {
+            "amount": 450000,
+            "source_text": "Total current assets",
+            "source_value": "$450,000"
+          }
+        },
+        "non_current": {
+          "pp_and_e": {
+            "amount": 800000,
+            "source_text": "Property, plant, and equipment",
+            "source_value": "$800,000"
+          },
+          "intangible_assets": {
+            "amount": 50000,
+            "source_text": "Intangible assets",
+            "source_value": "$50,000"
+          },
+          "total_non_current_assets": {
+            "amount": 850000,
+            "source_text": "Total non-current assets",
+            "source_value": "$850,000"
+          }
+        }
+      },
+      "liabilities": {
+        "total_liabilities": {
+          "amount": 520000,
+          "source_text": "Total liabilities",
+          "source_value": "$520,000"
+        },
+        "current": {
+          "accounts_payable": {
+            "amount": 110000,
+            "source_text": "Accounts payable",
+            "source_value": "$110,000"
+          },
+          "short_term_debt": {
+            "amount": 70000,
+            "source_text": "Short-term debt",
+            "source_value": "$70,000"
+          },
+          "total_current_liabilities": {
+            "amount": 180000,
+            "source_text": "Total current liabilities",
+            "source_value": "$180,000"
+          }
+        },
+        "non_current": {
+          "long_term_debt": {
+            "amount": 340000,
+            "source_text": "Long-term debt",
+            "source_value": "$340,000"
+          },
+          "total_non_current_liabilities": {
+            "amount": 340000,
+            "source_text": "Total non-current liabilities",
+            "source_value": "$340,000"
+          }
+        }
+      },
+      "equity": {
+        "total_equity": {
+          "amount": 780000,
+          "source_text": "Total equity",
+          "source_value": "$780,000"
+        },
+        "common_stock": {
+          "amount": 350000,
+          "source_text": "Common stock",
+          "source_value": "$350,000"
+        },
+        "retained_earnings": {
+          "amount": 430000,
+          "source_text": "Retained earnings",
+          "source_value": "$430,000"
+        }
+      }
+    },
+    "validation_report": {
+      "is_balanced": true,
+      "accounting_equation": {
+        "assets": 1300000,
+        "L+E": 1300000,
+        "difference": 0
+      },
+      "status": "PASS"
+    }
+  }
+}
