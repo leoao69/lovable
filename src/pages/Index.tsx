@@ -36,44 +36,65 @@ const Index = () => {
     setHasChanges(false);
   }, []);
 
+  const applyFinancialData = useCallback((parsed: FinancialData, sourceLabel: string) => {
+    setFinancialData(parsed);
+    setOriginalData(JSON.parse(JSON.stringify(parsed)));
+
+    const years = Object.keys(parsed);
+    if (years.length > 0) {
+      setSelectedYear(years[0]);
+    }
+
+    setStatus('complete');
+    toast({
+      title: "Processing complete",
+      description: `Loaded ${sourceLabel} for ${years.length} period(s).`,
+    });
+  }, [toast]);
+
   const handleProcess = useCallback(async () => {
     if (!selectedFile) return;
 
     setStatus('uploading');
-    
+
     // Simulate file upload delay
     await new Promise(resolve => setTimeout(resolve, 500));
-    
+
     setStatus('processing');
-    
+
     try {
       // Read file content - for demo, we'll parse JSON directly
       // In production, this would call your backend API
       const content = await selectedFile.text();
       const parsed = JSON.parse(content) as FinancialData;
-      
+
       // Simulate processing delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setFinancialData(parsed);
-      setOriginalData(JSON.parse(JSON.stringify(parsed)));
-      
-      // Set the first year as selected
-      const years = Object.keys(parsed);
-      if (years.length > 0) {
-        setSelectedYear(years[0]);
-      }
-      
-      setStatus('complete');
-      toast({
-        title: "Processing complete",
-        description: `Successfully extracted financial data for ${years.length} period(s).`,
-      });
+
+      applyFinancialData(parsed, 'your upload');
     } catch (err) {
       setStatus('error');
       setError('Failed to parse file. Please ensure it\'s a valid format.');
     }
-  }, [selectedFile, toast]);
+  }, [applyFinancialData, selectedFile]);
+
+  const handleLoadSample = useCallback(async () => {
+    setStatus('processing');
+    setError(undefined);
+    setSelectedFile(null);
+
+    try {
+      const response = await fetch('/sample-financials.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch sample data.');
+      }
+      const parsed = (await response.json()) as FinancialData;
+      applyFinancialData(parsed, 'sample data');
+    } catch (err) {
+      setStatus('error');
+      setError('Unable to load sample data. Please try again.');
+    }
+  }, [applyFinancialData]);
 
   const handleDataChange = useCallback((path: string[], value: number) => {
     if (!financialData) return;
@@ -264,6 +285,17 @@ const Index = () => {
                 size="lg"
               >
                 Process Balance Sheet
+              </Button>
+            )}
+
+            {!selectedFile && status !== 'processing' && status !== 'uploading' && (
+              <Button
+                onClick={handleLoadSample}
+                variant="outline"
+                className="w-full"
+                size="lg"
+              >
+                Load sample data
               </Button>
             )}
           </div>
